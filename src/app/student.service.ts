@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
+import { Student } from './student.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,4 +18,7 @@ export class StudentService {
     return firstValueFrom(this.httpClient.get(`${this.baseUrl}`))
   };
 
+  add(student: Student): Promise<any> {
+    return firstValueFrom(this.httpClient.post(`${this.baseUrl}`, student))
+  }
 }
