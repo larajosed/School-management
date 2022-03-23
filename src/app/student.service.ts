@@ -20,5 +20,9 @@ export class StudentService {
 
   add(student: Student): Promise<any> {
     return firstValueFrom(this.httpClient.post(`${this.baseUrl}`, student))
+  };
+
+  getById(id: number): Promise<any> {
+    return firstValueFrom(this.httpClient.get(`${this.baseUrl}/${id}`))
   }
 }

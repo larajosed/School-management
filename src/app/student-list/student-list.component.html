@@ -1,14 +1,14 @@
-<table>
+<table class="table">
     <thead>
         <tr>
-            <td>Nombre Completo</td>
-            <td>Email</td>
-            <td>Curso</td>
+            <th scope="col">Nombre Completo</th>
+            <th scope="col">Email</th>
+            <th scope="col">Curso</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let student of list">
-            <td>{{student.Full_Name}}</td>
+            <td><a href="/students/{{student.idStudent}}">{{student.Full_Name}}</a></td>
             <td>{{student.email}}</td>
             <td>{{student.Course}}</td>
         </tr>
