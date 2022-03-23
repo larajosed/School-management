@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <td>Nombre Completo</td>
+            <td>Email</td>
+            <td>Curso</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of list">
+            <td>{{student.Full_Name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.Course}}</td>
+        </tr>
+    </tbody>
+</table>
