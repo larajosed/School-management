@@ -11,6 +11,7 @@
             <td><a href="/students/{{student.idStudent}}">{{student.Full_Name}}</a></td>
             <td>{{student.email}}</td>
             <td>{{student.Course}}</td>
+            <td><i class="bi bi-trash3" (click)="onClick(student.idStudent)"></i></td>
         </tr>
     </tbody>
 </table>

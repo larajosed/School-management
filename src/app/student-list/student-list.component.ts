@@ -17,9 +17,19 @@ export class StudentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.studentService.getAll().then((res) => {
-      this.list = res.data
-    })
+    this.list = [{ "idStudent": 1, "Course": "1", "email": "rafaelordonezmolina@gmail.com", "Full_Name": "Rafael Ordonez" }, { "idStudent": 3, "Course": "1", "email": "rafa@gmail.com", "Full_Name": "Rafa" }]
+    /*  this.studentService.getAll().then((res) => {
+       this.list = res.data
+     }) */
+  }
+
+  onClick(id: any) {
+    //this.studentService.delete(id).then(res => {
+    var filteredStudent = this.list.filter(student => {
+      return student.idStudent != id;
+    });
+    this.list = filteredStudent;
+    //})
   }
 
 }

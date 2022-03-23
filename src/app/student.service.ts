@@ -25,4 +25,8 @@ export class StudentService {
   getById(id: number): Promise<any> {
     return firstValueFrom(this.httpClient.get(`${this.baseUrl}/${id}`))
   }
+
+  delete(id: number): Promise<any> {
+    return firstValueFrom(this.httpClient.delete(`${this.baseUrl}/${id}`))
+  }
 }
